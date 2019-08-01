@@ -7,7 +7,6 @@ const autoprefixer = require('autoprefixer');
 const minify = require('gulp-csso');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
-const svgstore = require('gulp-svgstore');
 const htmlmin = require('gulp-htmlmin');
 
 
@@ -42,15 +41,6 @@ function images() {
 			imagemin.svgo()
 		]))
 		.pipe(gulp.dest('build/img'));
-}
-
-function sprite() {
-	return gulp.src('source/img/icon-*.svg')
-		.pipe(svgstore({
-			inlineSvg: true
-		}))
-		.pipe(rename('sprite.svg'))
-		.pipe(gulp.dest('source/img'));
 }
 
 function htmlminify() {

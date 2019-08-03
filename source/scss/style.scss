@@ -35,6 +35,10 @@ legend {
 	padding: 0;
 }
 
+.svg-hidden {
+	display: none;
+}
+
 @import 'variables.scss';
 @import 'scaffolding.scss';
 @import 'blocks/page-header1.scss';

@@ -34,7 +34,7 @@ html
 					+b.UL.main-nav__list.user-list__
 						+e.LI.item
 							+b.A.user-list__login(href="login.html") <svg class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"/><polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"/></svg> Войти
-		+b.main.page-main
+		+b.MAIN.page-main
 			+b.H1.visually-hidden Барбершоп «Бородинский» – истинно мужская классика
 			+b.SECTION.stats
 				+e.HEADER.header
@@ -123,3 +123,19 @@ html
 				+b.page-footer__copyright.copyright__
 					+e.B.text Разработано:
 					+e.A.link.button(href="https://htmlacademy.ru/intensive/adaptive") HTML Academy
+	<script>
+  var navMain = document.querySelector('.main-nav');
+  var navToggle = document.querySelector('.main-nav__toggle');
+
+  navMain.classList.remove('main-nav--nojs');
+
+  navToggle.addEventListener('click', function() {
+    if (navMain.classList.contains('main-nav--closed')) {
+      navMain.classList.remove('main-nav--closed');
+      navMain.classList.add('main-nav--opened');
+    } else {
+      navMain.classList.add('main-nav--closed');
+      navMain.classList.remove('main-nav--opened');
+    }
+  });
+</script>

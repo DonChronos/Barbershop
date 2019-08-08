@@ -58,6 +58,13 @@ function pugify() {
     .pipe(gulp.dest('build'));
 }
 
+function js() {
+	return gulp.src('source/js/*.js)
+	//add minifier
+	.pipe(gulp.dest('build/js'));
+}
+
 exports.pugify = pugify;
 exports.style = style;
 exports.watch = watch;
+exports.js = js;

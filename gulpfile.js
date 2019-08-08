@@ -50,8 +50,11 @@ function htmlminify() {
 }
 
 function pugify() {
-	return gulp.src('build/*.html')
-    .pipe(htmlmin({ collapseWhitespace: true }))
+	return gulp.src('source/*.pug')
+    .pipe(pug({
+		doctype: 'html',
+		pretty: false
+	}))
     .pipe(gulp.dest('build'));
 }
 

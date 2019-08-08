@@ -12,13 +12,14 @@ const htmlmin = require('gulp-htmlmin');
 
 function style() {
 	return gulp.src('source/scss/style.scss')
-		.pipe(sass().on('error', sass.logErorr))
+		.pipe(sass())
 		.pipe(postcss([
 			autoprefixer()
 		]))
 		.pipe(gulp.dest('build/css'))
 		.pipe(minify())
 		.pipe(rename('style.min.css'))
+		.pipe(gulp.dest('build/css'))
 		.pipe(browserSync.stream());
 }
 
@@ -59,7 +60,7 @@ function pugify() {
 }
 
 function js() {
-	return gulp.src('source/js/*.js)
+	return gulp.src('source/js/*.js')
 	//add minifier
 	.pipe(gulp.dest('build/js'));
 }

@@ -1,3 +1,4 @@
+'use strict';
 const navMain = document.querySelector('.main-nav');
 navMain.classList.remove('main-nav--nojs');
 const navToggle = document.querySelector('.main-nav__toggle');

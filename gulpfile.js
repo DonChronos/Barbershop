@@ -8,13 +8,19 @@ const minify = require('gulp-csso');
 const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
+const mqpacker = require('css-mqpacker');
 
 
 function style() {
 	return gulp.src('source/scss/style.scss')
 		.pipe(sass())
 		.pipe(postcss([
-			autoprefixer()
+			autoprefixer({browsers: [
+			"last 2 versions"
+			]}),
+			mqpacker({
+				sort: true
+			})
 		]))
 		.pipe(gulp.dest('build/css'))
 		.pipe(minify())

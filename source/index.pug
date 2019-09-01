@@ -22,7 +22,7 @@ html
 					+b.SOURCE(media="(min-width: 768px)" srcset="img/logotype-tablet.svg")
 					+b.IMG(src="img/logotype-mobile.svg" alt="Барбершоп «Бородинский»" width="226" height="30")
 			+b.NAV.main-nav--closed.--nojs
-				+e.BUTTON.toggle.visually-hidden(type="button") Открыть меню
+				+e.BUTTON.toggle(type="button")
 				+e.wrapper
 					+b.UL.main-nav__list.site-list__
 						+e.LI.item--active
@@ -39,7 +39,7 @@ html
 			+b.SECTION.stats
 				+e.HEADER.header
 					+b.H2.stats__title.visually-hidden Статистика Барбершопа
-					+b.B.stats__slogan Стрижка у нас это выгодно!
+					+b.B.stats__slogan Стрижка у нас<br> это выгодно!
 					+b.P.stats__intro Мужская стрижка требует точного подхода. Обратимся к статистике:
 					+b.SMALL.stats__legend--top <sup>*</sup> — приведённые данные ложь
 				+e.TABLE.list

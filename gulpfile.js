@@ -69,3 +69,4 @@ exports.pugify = pugify;
 exports.style = style;
 exports.watch = watch;
 exports.js = js;
+exports.images = images;

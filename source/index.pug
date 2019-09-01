@@ -18,8 +18,8 @@ html
 		+b.HEADER.page-header
 			+e.A.logo
 				+b.PICTURE
-					+b.SOURCE(media="min-width: 1200px" srcset="img/logotype-desktop.svg")
-					+b.SOURCE(media="min-width: 768px" srcset="img/logotype-tablet.svg")
+					+b.SOURCE(media="(min-width: 1200px)" srcset="img/logotype-desktop.svg")
+					+b.SOURCE(media="(min-width: 768px)" srcset="img/logotype-tablet.svg")
 					+b.IMG(src="img/logotype-mobile.svg" alt="Барбершоп «Бородинский»" width="226" height="30")
 			+b.NAV.main-nav--closed.--nojs
 				+e.BUTTON.toggle.visually-hidden(type="button") Открыть меню

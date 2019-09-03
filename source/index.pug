@@ -13,6 +13,7 @@ html
 		meta(charset='utf-8')
 		meta(name='description' content='Barbershop - a cool barbershop')
 		meta(name='keywords' content='hair, cut, haircut')
+		link(href='css/normalize.css' rel='stylesheet')
 		link(href='css/style.css' rel='stylesheet')
 	body
 		+b.HEADER.page-header
@@ -62,9 +63,9 @@ html
 							+b.H3.advantages__title Дорого
 							+b.P.advantages__description Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?
 					+e.toggles.slider__advantages
-						+b.BUTTON.slider__toggle(type="button") 1
-						+b.BUTTON.slider__toggle(type="button") 2
-						+b.BUTTON.slider__toggle(type="button") 3
+						+b.BUTTON.slider__toggle--advantages.active(type="button" onclick="currentSlide(1)") 1
+						+b.BUTTON.slider__toggle--advantages(type="button" onclick="currentSlide(2)") 2
+						+b.BUTTON.slider__toggle--advantages(type="button" onclick="currentSlide(3)") 3
 			+b.SECTION.news
 				+e.wrapper
 					+b.H2.news__title Новости и акции
@@ -99,12 +100,12 @@ html
 								+b.image.reviews__author-image(src="img/picture-ivan.jpg" width="50" height="33" alt="Фото Ивана Бородайло")
 							+b.CITE.reviews__author-name Иван Бородайло
 							+b.P.reviews__text В Бородинском ваша борода в надёжных руках!
-						+b.BUTTON.reviews__prev(type="button") Предыдущий отзыв
-						+b.BUTTON.reviews__next(type="button") Следующий отзыв
+						+b.BUTTON.reviews__prev(type="button" onclick="plusSlides1(-1)") Предыдущий отзыв
+						+b.BUTTON.reviews__next(type="button" onclick="plusSlides1(1)") Следующий отзыв
 					+e.toggles.slider__reviews
-						+b.BUTTON.slider__toggle--reviews(type="button") 1
-						+b.BUTTON.slider__toggle--reviews(type="button") 2
-						+b.BUTTON.slider__toggle--reviews(type="button") 3
+						+b.BUTTON.slider__toggle--reviews.active(type="button" onclick="currentSlide1(1)") 1
+						+b.BUTTON.slider__toggle--reviews(type="button" onclick="currentSlide1(2)") 2
+						+b.BUTTON.slider__toggle--reviews(type="button" onclick="currentSlide1(3)") 3
 		+b.FOOTER.page-footer
 			+e.wrapper
 				+b.page-footer__contacts.contacts__

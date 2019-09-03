@@ -5,12 +5,10 @@
       linear-gradient(
         to top right,
         transparent 50%,
-        $color 50%
       ),
       linear-gradient(
         to top left,
         transparent 50%,
-        $color 50%
       );
     background-position: 0 0, 100% 0;
     background-repeat: no-repeat;
@@ -68,7 +66,7 @@
       width: 95px;
     }
 
-    &--expensive::before {
+    &--price::before {
       background-image: url("../img/advantage-3.svg");
       height: 95px;
       width: 95px;
@@ -86,40 +84,14 @@
     margin-bottom: 14px;
   }
 
-  &__text {
-    margin: 0;
-  }
 
 }
 
 @media (max-width: 767px) {
-
-  .advantages  {
-
-    .advantages__item {
-      display: none;
-    }
-
-    #advantages-1:checked ~ .advantages__item--fast,
-    #advantages-2:checked ~ .advantages__item--cool,
-    #advantages-3:checked ~ .advantages__item--expensive {
-      display: block;
-    }
-
-    #advantages-1:checked ~ .slider label[for="advantages-1"],
-    #advantages-2:checked ~ .slider label[for="advantages-2"],
-    #advantages-3:checked ~ .slider label[for="advantages-3"] {
-      background-color: #ffffff;
-    }
-
-    &__text {
-      min-height: 108px;
-    }
-
-  }
-
+.advantages__text {
+min-height: 108px;
 }
-
+}
 @media (min-width: 768px) {
 
   .advantages  {

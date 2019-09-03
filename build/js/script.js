@@ -1,4 +1,5 @@
 'use strict';
+let slideIndex = 1;
 const navMain = document.querySelector('.main-nav');
 navMain.classList.remove('main-nav--nojs');
 const navToggle = document.querySelector('.main-nav__toggle');
@@ -26,3 +27,28 @@ close.addEventListener("click", function(event) {
 	event.preventDefault();
 	popup.classList.remove('modal-login--show');
 });
+showSlides(slideIndex);
+
+function plusSlides(n) {
+	showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+	showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("advantages__item");
+  let dots = document.getElementsByClassName("slider__toggle--advantages");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 

@@ -1,18 +1,23 @@
 .slider {
-  font-size: 0;
   position: relative;
   text-align: center;
-
+  &__item {
+  display: none;
+  }
+  &__item:nth-child(1) {
+  display: block;
+  }
   &__toggle {
+    cursor: pointer;
     border: 1px solid #ffffff;
     display: inline-block;
-    margin: 0 13px;
-    margin-top: 5px;
+    margin: 5px 13px 0;
     height: 5px;
     transform: rotate(45deg);
     vertical-align: top;
     width: 5px;
-
+	line-height: 27px;
+	background-color: transparent;
     &__reviews {
       border-color: #939290;
     }
@@ -20,7 +25,9 @@
   }
 
 }
-
+.active {
+background-color: #fff;
+}
 @media (min-width: 768px) {
 
   .slider {

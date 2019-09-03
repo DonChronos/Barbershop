@@ -1,0 +1,230 @@
+.advantages  {
+  &::after {
+    content: "";
+    background-image:
+      linear-gradient(
+        to top right,
+        transparent 50%,
+        $color 50%
+      ),
+      linear-gradient(
+        to top left,
+        transparent 50%,
+        $color 50%
+      );
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50.1% 100%;
+    height: 35px;
+    left: 0;
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    z-index: 10;
+	}
+
+  position: relative;
+
+  &__wrapper {
+    width: auto;
+  }
+
+  &__item {
+    align-items: center;
+    color: #ffffff;
+    padding: 0 40px;
+    padding-bottom: 24px;
+    padding-top: 212px;
+    position: relative;
+    text-align: center;
+
+    &:nth-of-type(n+2) {
+      display: none;
+    }
+
+    &::before {
+      background-position: 50% 50%;
+      background-repeat: no-repeat;
+      background-size: 95px auto;
+      content: "";
+      height: 95px;
+      right: 50%;
+      position: absolute;
+      top: 87px;
+      transform: translateX(50%);
+      width: 95px;
+
+    }
+
+    &--fast::before {
+      background-image: url("../img/advantage-1.svg");
+      height: 95px;
+      width: 95px;
+    }
+
+    &--cool::before {
+      background-image: url("../img/advantage-2.svg");
+      height: 95px;
+      width: 95px;
+    }
+
+    &--expensive::before {
+      background-image: url("../img/advantage-3.svg");
+      height: 95px;
+      width: 95px;
+    }
+
+  }
+
+  &__title {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+
+    display: block;
+    margin-bottom: 14px;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+}
+
+@media (max-width: 767px) {
+
+  .advantages  {
+
+    .advantages__item {
+      display: none;
+    }
+
+    #advantages-1:checked ~ .advantages__item--fast,
+    #advantages-2:checked ~ .advantages__item--cool,
+    #advantages-3:checked ~ .advantages__item--expensive {
+      display: block;
+    }
+
+    #advantages-1:checked ~ .slider label[for="advantages-1"],
+    #advantages-2:checked ~ .slider label[for="advantages-2"],
+    #advantages-3:checked ~ .slider label[for="advantages-3"] {
+      background-color: #ffffff;
+    }
+
+    &__text {
+      min-height: 108px;
+    }
+
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .advantages  {
+    padding-bottom: 7px;
+
+    &::after {
+      bottom: -41px;
+      height: 41px;
+    }
+
+    &__item {
+      min-height: 105px;
+      padding-bottom: 36px;
+      padding-left: 159px;
+      padding-right: 30px;
+      padding-top: 36px;
+      text-align: left;
+
+      &:nth-of-type(n+2) {
+        display: block;
+      }
+
+      &::before {
+        left: 31px;
+        top: 45px;
+        transform: none;
+      }
+
+      &::after {
+        border-bottom: 1px solid #4a4a4a;
+        bottom: 0;
+        content: "";
+        height: 1px;
+        right: 50%;
+        position: absolute;
+        transform: translateX(50%);
+        width: 89%;
+      }
+
+      &:nth-of-type(3)::after {
+        border: none;
+      }
+
+    }
+
+    &__title {
+      line-height: 42.33px;
+      margin-bottom: 9px;
+      text-align: left;
+    }
+
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .advantages  {
+    padding: 0;
+    padding-top: 78px;
+
+    &__wrapper {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &::after {
+      bottom: -62px;
+      height: 62px;
+    }
+
+    &__item {
+      padding: 0 40px;
+      padding-bottom: 40px;
+      padding-top: 120px;
+      text-align: center;
+      width: 25%;
+
+      &::before {
+        left: auto;
+        right: 50%;
+        transform: translateX(50%);
+        top: 0;
+      }
+
+      &::after {
+        border-bottom: none;
+        border-right: 1px solid #4a4a4a;
+        content: "";
+        height: 84%;
+        position: absolute;
+        right: 0;
+        top: 1px;
+        width: 1px;
+      }
+
+    }
+
+    &__title {
+      margin-bottom: 7px;
+      text-align: center;
+    }
+
+  }
+
+}

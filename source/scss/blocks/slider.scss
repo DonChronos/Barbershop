@@ -1,0 +1,51 @@
+.slider {
+  font-size: 0;
+  position: relative;
+  text-align: center;
+
+  &__toggle {
+    border: 1px solid #ffffff;
+    display: inline-block;
+    margin: 0 13px;
+    margin-top: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+    vertical-align: top;
+    width: 5px;
+
+    &__reviews {
+      border-color: #939290;
+    }
+
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .slider {
+
+    &__advantages {
+      display: none;
+    }
+
+    &__reviews {
+      background-color: #f8f5f2;
+      bottom: -17px;
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      width: 125px;
+    }
+
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .slider__reviews {
+    background-color: transparent;
+    bottom: -65px;
+  }
+}

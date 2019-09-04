@@ -275,6 +275,8 @@ img {
     text-align: center; }
     .advantages__item:nth-of-type(n+2) {
       display: none; }
+    .advantages__item:nth-of-type(1) {
+      display: block; }
     .advantages__item::before {
       background-position: 50% 50%;
       background-repeat: no-repeat;

@@ -1,0 +1,260 @@
+.button {
+  background-color: #f8f5f2;
+  border: 1px solid #e5ddd5;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 24px;
+  padding: 12px 90px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: top;
+
+  &:hover {
+    border-color: #d5cabe;
+  }
+
+  &:active {
+    background-color: #d5c9bd;
+    color: #a99f95;
+  }
+
+  &--news {
+    margin: 0 auto;
+    padding: 12px 73px;
+    width: 280px;
+  }
+
+  &--to-main {
+    display: none;
+  }
+
+  &--feedback {
+    display: none;
+  }
+
+  &--contacts,
+  &--copyright {
+    background-color: #292929;
+    border-color: #3f3f3f;
+    color: #ffffff;
+    padding: 12px 73px;
+
+    &:hover {
+      border-color: #515151;
+    }
+
+    &:active {
+      background-color: transparent;
+      border-color: transparent;
+      color: #6a4d38;
+    }
+
+  }
+
+  &--copyright {
+    padding: 12px 87px;
+  }
+
+  &--submit,
+  &--modal-form {
+    background-color: #826550;
+    border: none;
+    color: #ffffff;
+    padding: 13px 0;
+    width: 100%;
+
+    &:hover {
+      background-color: #6a4d38;
+    }
+
+    &:active {
+      color: #a09187;
+    }
+
+  }
+
+  @keyframes change-color {
+
+    0% {
+      color: rgba(255, 255, 255, 1);
+    }
+    50% {
+      color: rgba(255, 255, 255, 0.6);
+    }
+    100% {
+      color: rgba(255, 255, 255, 1);
+    }
+
+  }
+
+  &--in-progress {
+    animation-iteration-count: infinite;
+    animation-name: change-color;
+    animation-duration: 2s;
+    background-color: #aeaeae;
+  }
+
+  &--log-in {
+    background-color: #826550;
+    border: none;
+    color: #ffffff;
+    padding: 12px 0;
+    width: 46.3%;
+
+    &:hover {
+      background-color: #6a4d38;
+    }
+
+    &:active {
+      color: #a09187;
+    }
+
+  }
+
+  &--close {
+    padding: 12px 0;
+    width: 46.3%;
+  }
+
+  &--modal-form {
+    width: 180px;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .button {
+
+    &--news {
+      padding: 12px 29px;
+      position: absolute;
+      right: 65px;
+      top: 84px;
+      width: auto;
+    }
+
+    &--feedback {
+      display: block;
+      padding: 12px 23px;
+      position: absolute;
+      right: 65px;
+      top: 37px;
+    }
+
+    &--to-main {
+      display: block;
+      height: 50px;
+      padding: 12px 35px;
+    }
+
+    &--contacts {
+      border: none;
+      font-weight: normal;
+      padding: 0;
+      text-transform: none;
+    }
+
+    &--copyright {
+      padding: 12px 26px;
+    }
+
+    &--contacts {
+      cursor: default;
+
+      &:active {
+        color: #ffffff;
+      }
+
+    }
+
+    &--submit {
+      font-size: 24px;
+      padding: 23px 0;
+    }
+
+    &--log-in {
+      padding: 13px 0;
+      width: 100%;
+    }
+
+    &--close {
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
+      font-size: 0;
+      height: 28px;
+      outline: 0;
+      position: absolute;
+      right: -103px;
+      top: 60px;
+      width: 28px;
+
+      &:active {
+        background-color: transparent;
+      }
+
+      &::before,
+      &::after {
+        background-color: #ffffff;
+        bottom: 50%;
+        content: "";
+        cursor: pointer;
+        height: 2px;
+        position: absolute;
+        left: -4px;
+        width: 36px;
+      }
+
+      &:active::before,
+      &:active::after {
+        background-color: #a09187;
+      }
+
+      &::before {
+        transform: rotate(45deg);
+      }
+
+      &::after {
+        transform: rotate(-45deg);
+      }
+
+    }
+
+    &--modal-form-sucess {
+      width: 320px;
+    }
+
+    &--modal-form-failure {
+      width: 148px;
+    }
+
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .button {
+
+    &--news {
+      right: 121px;
+      top: 117px;
+    }
+
+    &--feedback {
+      right: 121px;
+    }
+
+    &--submit {
+      padding: 23px 0;
+    }
+
+  }
+
+}

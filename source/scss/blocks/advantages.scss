@@ -5,10 +5,12 @@
       linear-gradient(
         to top right,
         transparent 50%,
+		#292929 50%
       ),
       linear-gradient(
         to top left,
         transparent 50%,
+		#292929 50%
       );
     background-position: 0 0, 100% 0;
     background-repeat: no-repeat;
@@ -138,7 +140,11 @@ min-height: 108px;
       }
 
     }
-
+    &__wrapper {
+	margin: 0 auto;
+	max-width: 960px;
+	width: 83.5%;
+	}
     &__title {
       line-height: 42.33px;
       margin-bottom: 9px;

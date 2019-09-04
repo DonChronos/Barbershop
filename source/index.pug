@@ -66,19 +66,17 @@ html
 						+b.BUTTON.slider__toggle--advantages(type="button" onclick="currentSlide(2)") 2
 						+b.BUTTON.slider__toggle--advantages(type="button" onclick="currentSlide(3)") 3
 			+b.SECTION.news
-				+e.wrapper
-					+b.H2.news__title Новости и акции
-					+b.UL.news__list
-						+b.LI.news__item
-							+b.TIME.news__date(datetime="2017-09-29") <b class="news__day">29</b> сент
-							+b.P.news__text Нам наконец-то завезли Егермейстер! Теперь вы можете пропустить стаканчик во время стрижки.
-						+b.LI.news__item
-							+b.TIME.news__date(datetime="2017-09-19") <b class="news__day">19</b> сент
-							+b.P.news__text В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды. Спешите записаться!
-						+b.LI.news__item
-							+b.TIME.news__date(datetime="2017-09-09") <b class="news__day">9</b> сент
-							+b.P.news__text Всё дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чём здесь подвох!
-					+b.A.news__to-all.button(href="#") Показать все
+				+b.H2.news__title Новости и акции
+				+b.ARTICLE.news__item
+					+b.TIME.news__date(datetime="2017-09-29") <span class="news__date--big">29</span> сент
+					+b.A.news__link(href="#") Нам наконец-то завезли Егермейстер! Теперь вы можете пропустить стаканчик во время стрижки.
+				+b.ARTICLE.news__item
+					+b.TIME.news__date(datetime="2017-09-19") <span class="news__date--big">19</span> сент
+					+b.A.news__link(href="#") В нашей команде пополнение, Борис «Бритва» Стригунец пополнил наши стройные ряды. Спешите записаться!
+				+b.ARTICLE.news__item
+					+b.TIME.news__date(datetime="2017-09-09") <span class="news__date--big">9</span> сент
+					+b.A.news__link(href='#') Всё дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чём здесь подвох!
+				+b.A.button--news(href="#") Показать все
 			+b.SECTION.reviews
 				+e.wrapper.slider__
 					+b.H2.reviews__title Отзывы о нас

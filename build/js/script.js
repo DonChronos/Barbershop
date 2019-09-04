@@ -1,5 +1,8 @@
 'use strict';
 let slideIndex = 1;
+let btnShowAll = document.querySelector('.button--news');
+if (btnShowAll) btnShowAll.addEventListener('click', showAllNews);
+let news = document.querySelectorAll('.news__item');
 const navMain = document.querySelector('.main-nav');
 navMain.classList.remove('main-nav--nojs');
 const navToggle = document.querySelector('.main-nav__toggle');
@@ -51,4 +54,20 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " active";
+}
+
+function showAllNews(event) {
+  event.preventDefault();
+
+  for (let i = 0; i < news.length; i++) {
+    news[i].style.display = 'flex';
+
+    if ( i === 1 ) {
+      news[i].style.marginBottom = 'auto';
+    }
+
+    news[i].style.border = 'none';
+
+  }
+
 } 

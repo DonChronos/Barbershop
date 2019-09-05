@@ -18,16 +18,24 @@
     width: 5px;
 	line-height: 27px;
 	background-color: transparent;
-    &__reviews {
+	position: relative;
+	text-align: center;
+    &--reviews {
       border-color: #939290;
     }
 
   }
 
 }
+
 .active {
 background-color: #fff;
 }
+
+.slider__toggle--reviews.active {
+background-color: #000;
+}
+
 @media (min-width: 768px) {
 
   .slider {

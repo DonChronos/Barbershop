@@ -9,7 +9,9 @@ const rename = require('gulp-rename');
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 const mqpacker = require('css-mqpacker');
-
+const babel = require('gulp-babel');
+const uglify = require('gulp-uglify');
+const pipeline = require('readable-stream').pipeline;
 
 function style() {
 	return gulp.src('source/scss/style.scss')
@@ -66,12 +68,16 @@ function pugify() {
 }
 
 function js() {
-	return gulp.src('source/js/*.js')
-	//add minifier
-	.pipe(gulp.dest('build/js'));
+	return pipeline(
+			gulp.src('source/js/*.js'),
+			babel(),
+			uglify(),
+			gulp.dest('build/js')
+	);
 }
 
 exports.pugify = pugify;
+exports.htmlminify = htmlminify;
 exports.style = style;
 exports.watch = watch;
 exports.js = js;

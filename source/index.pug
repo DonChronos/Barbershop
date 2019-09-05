@@ -62,9 +62,9 @@ html
 						+b.H3.advantages__title Дорого
 						+b.P.advantages__description Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт определённый статус?
 					+e.toggles.slider__advantages
-						+b.BUTTON.slider__toggle--advantages.active(type="button" onclick="currentSlide(1)") 1
-						+b.BUTTON.slider__toggle--advantages(type="button" onclick="currentSlide(2)") 2
-						+b.BUTTON.slider__toggle--advantages(type="button" onclick="currentSlide(3)") 3
+						+b.BUTTON.slider__toggle--advantages.active(type="button" onclick="currentSlide(1)")
+						+b.BUTTON.slider__toggle--advantages(type="button" onclick="currentSlide(2)")
+						+b.BUTTON.slider__toggle--advantages(type="button" onclick="currentSlide(3)")
 			+b.SECTION.news
 				+b.H2.news__title Новости и акции
 				+b.ARTICLE.news__item
@@ -78,31 +78,27 @@ html
 					+b.A.news__link(href='#') Всё дорожает, а наши стрижки нет! Как так? Приходите, постригитесь и узнаете, в чём здесь подвох!
 				+b.A.button--news(href="#") Показать все
 			+b.SECTION.reviews
+				+b.H2.reviews__title Отзывы о нас
 				+e.wrapper.slider__
-					+b.H2.reviews__title Отзывы о нас
-					+b.A.reviews__write.button(href="#") Оставить свой
-					+e.list.reviews__list
-						+b.BLOCKQUOTE.reviews__item.slider__item
-							+b.P.reviews__author-picture
-								+b.image.reviews__author-image(src="img/picture-travis.jpg" width="50" height="33" alt="Фото Трэвиса Баркера")
-							+b.CITE.reviews__author-name Трэвис Баркер
-							+b.P.reviews__text Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
-						+b.BLOCKQUOTE.reviews__item.slider__item
-							+b.P.reviews__author-picture
-								+b.image.reviews__author-image(src="img/picture-john.jpg" width="50" height="33" alt="Фото Джона Смита")
-							+b.CITE.reviews__author-name Джон Смит
-							+b.P.reviews__text Отличную стрижку мне сделали ребята.
-						+b.BLOCKQUOTE.reviews__item.slider__item
-							+b.P.reviews__author-picture
-								+b.image.reviews__author-image(src="img/picture-ivan.jpg" width="50" height="33" alt="Фото Ивана Бородайло")
-							+b.CITE.reviews__author-name Иван Бородайло
-							+b.P.reviews__text В Бородинском ваша борода в надёжных руках!
-						+b.BUTTON.reviews__prev(type="button" onclick="plusSlides1(-1)") Предыдущий отзыв
-						+b.BUTTON.reviews__next(type="button" onclick="plusSlides1(1)") Следующий отзыв
+					+b.reviews__item.slider__item
+						+b.image.reviews__author-image(src="img/picture-travis.jpg" width="50" height="33" alt="Фото Трэвиса Баркера")
+						+b.B.reviews__author-name Трэвис Баркер
+						+b.P.reviews__text Спасибо за лысину! Был проездом в Москве, заскочил побриться, чтобы было видно новую татуировку!
+					+b.reviews__item.slider__item
+						+b.image.reviews__author-image(src="img/picture-travis.jpg" width="50" height="33" alt="Фото Джона Смита")
+						+b.B.reviews__author-name Джон Смит
+						+b.P.reviews__text Отличную стрижку мне сделали ребята.
+					+b.reviews__item.slider__item
+						+b.image.reviews__author-image(src="img/picture-travis.jpg" width="50" height="33" alt="Фото Ивана Бородайло")
+						+b.B.reviews__author-name Иван Бородайло
+						+b.P.reviews__text В Бородинском ваша борода в надёжных руках!
+					+b.BUTTON.reviews__button--prev(type="button" onclick="plusSlides1(-1)") Предыдущий отзыв
+					+b.BUTTON.reviews__button--next(type="button" onclick="plusSlides1(1)") Следующий отзыв
 					+e.toggles.slider__reviews
-						+b.BUTTON.slider__toggle--reviews.active(type="button" onclick="currentSlide1(1)") 1
-						+b.BUTTON.slider__toggle--reviews(type="button" onclick="currentSlide1(2)") 2
-						+b.BUTTON.slider__toggle--reviews(type="button" onclick="currentSlide1(3)") 3
+						+b.BUTTON.slider__toggle--reviews.active(type="button" onclick="currentSlide1(1)")
+						+b.BUTTON.slider__toggle--reviews(type="button" onclick="currentSlide1(2)")
+						+b.BUTTON.slider__toggle--reviews(type="button" onclick="currentSlide1(3)")
+				+b.A.button--reviews(href="#") Оставить свой
 		+b.FOOTER.page-footer
 			+e.wrapper
 				+b.page-footer__contacts.contacts__

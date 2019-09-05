@@ -6,7 +6,7 @@
   cursor: pointer;
   display: inline-block;
   font-size: 18px;
-  font-weight: bold;
+  font-weight: 700;
   line-height: 24px;
   padding: 12px 90px;
   text-align: center;
@@ -33,7 +33,7 @@
     display: none;
   }
 
-  &--feedback {
+  &--reviews {
     display: none;
   }
 
@@ -139,7 +139,7 @@
       width: auto;
     }
 
-    &--feedback {
+    &--reviews {
       display: block;
       padding: 12px 23px;
       position: absolute;
@@ -247,7 +247,7 @@
       top: 117px;
     }
 
-    &--feedback {
+    &--reviews {
       right: 121px;
     }
 

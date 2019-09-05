@@ -935,7 +935,8 @@ img {
       outline: none;
       position: absolute;
       top: 0;
-      width: 50px; }
+      width: 50px;
+      cursor: pointer; }
       .reviews__button:hover {
         border-color: #d5c9bd; }
       .reviews__button:active {

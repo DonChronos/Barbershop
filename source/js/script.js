@@ -1,4 +1,16 @@
 'use strict';
+let x = window.matchMedia('(max-width: 767px)');
+let mfPersonal = document.querySelector('.modal-personal');
+let mfSuccess = document.querySelector('.modal-form--success');
+let btnLogin = document.querySelector('.button--log-in');
+let btnClose = document.querySelector('.button--close');
+let btnSuccess = document.querySelector('.button--modal-form-success');
+let btnSendOrder = document.querySelector('.button--submit');
+let btnUser = document.querySelector('.user-list__login');
+if (btnLogin) btnLogin.addEventListener('click', closeModalForm);
+if (btnClose) btnClose.addEventListener('click', closeModalForm);
+if (btnSuccess) btnSuccess.addEventListener('click', closeModalForm);
+if (btnUser) btnUser.addEventListener('click', showPersonal);
 let slideIndex = 1;
 let slideIndex1 = 1;
 let btnShowAll = document.querySelector('.button--news');
@@ -16,22 +28,8 @@ navToggle.addEventListener('click', function() {
 		navMain.classList.remove('main-nav--opened');
 	}
 });
-const link = document.querySelector('.main-nav__user-login');
-const popup = document.querySelector(".modal-login");
-const close = popup.querySelector(".modal-login__close");
-const form = popup.querySelector("form");
-const login = popup.querySelector("[name=login]");
-const password = popup.querySelector("[name=password]");
-const storage = localStorage.getItem("login");
-link.addEventListener("click", function(event) {
-	event.preventDefault();
-	popup.classList.add('modal-login--show');
-});
-close.addEventListener("click", function(event) {
-	event.preventDefault();
-	popup.classList.remove('modal-login--show');
-});
-showSlides(slideIndex);
+
+if (x.matches) showSlides(slideIndex);
 showSlides1(slideIndex1);
 
 function plusSlides1(n) {
@@ -92,4 +90,28 @@ function showAllNews(event) {
 
   }
 
+}
+
+function showPersonal(event) {
+  event.preventDefault();
+
+  navMain.classList.remove('main-nav--opened');
+  navMain.classList.add('main-nav--closed');
+  mfPersonal.classList.add('modal-personal--show');
 } 
+
+function closeModalForm(event) {
+  event.preventDefault();
+
+  switch (event.currentTarget.parentNode.parentNode.classList[0]) {
+    case 'modal-personal':
+      mfPersonal.classList.remove('modal-personal--show');
+      break;
+
+    case 'modal-form':
+      mfSuccess.classList.remove('modal-form--show');
+      btnSendOrder.classList.toggle('button--in-progress');
+      break;
+  }
+
+}

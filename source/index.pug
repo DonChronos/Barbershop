@@ -34,7 +34,7 @@ html
 						+button('HTML Academy', '#')
 					+b.UL.main-nav__list.user-list__
 						+e.LI.item
-							+b.A.user-list__login(href="login.html") <svg class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"/><polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"/></svg> Войти
+							+b.A.user-list__login(href="#") <svg class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"/><polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"/></svg> Войти
 		+b.MAIN.page-main
 			+b.H1.visually-hidden Барбершоп «Бородинский» – истинно мужская классика
 			+b.SECTION.stats
@@ -99,6 +99,23 @@ html
 						+b.BUTTON.slider__toggle--reviews(type="button" onclick="currentSlide1(2)")
 						+b.BUTTON.slider__toggle--reviews(type="button" onclick="currentSlide1(3)")
 				+b.A.button--reviews(href="#") Оставить свой
+		+b.SECTION.modal-personal
+			+e.HEADER.header
+				+b.B.modal-personal__title Личный кабинет
+				+b.P.modal-personal__text Введите свой логин и пароль, чтобы войти
+			+e.FORM.form(action='#' method='post')
+				+b.modal-personal__user
+					+b.INPUT.modal-personal__field(type='text' id='login' placeholder='Логин')
+					+b.modal-personal__caption--login  Логин
+					+b.INPUT.modal-personal__field--password(type='password' id='password' placeholder='Пароль')
+					+b.modal-personal__caption--password Пароль
+				+b.modal-personal__settings
+					+b.INPUT.modal-personal__field--remember(type='checkbox' name='remember' id='remember')
+					+b.LABEL.modal-personal__caption--remember(for='remember') Запомните меня!
+					+b.A.modal-personal__forgot(href='#') Я забыл пароль!
+				+b.BUTTON.button--log-in(type='submit') Войти 
+					+b.SPAN.modal-personal__in-personal  в личный кабинет
+				+b.BUTTON.button--close(type='button') Закрыть
 		+b.FOOTER.page-footer
 			+e.wrapper
 				+b.page-footer__contacts.contacts__

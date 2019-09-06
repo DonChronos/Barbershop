@@ -1,0 +1,16 @@
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select,
+input[type="password"] {
+  box-sizing: border-box;
+  outline: none;
+  font-family: PT Sans Narrow, Arial, sans-serif;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+  margin: 20px;
+}

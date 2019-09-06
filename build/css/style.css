@@ -733,6 +733,9 @@ input[type="radio"] {
   display: none;
   margin: 20px; }
 
+label {
+  cursor: pointer; }
+
 @media (min-width: 768px) {
   .page-header {
     background-color: #000000; }

@@ -1,0 +1,38 @@
+.copyright {
+  padding-bottom: 25px;
+  padding-top: 9px;
+  text-align: center;
+
+  &__title {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+
+}
+
+@media (min-width: 768px) {
+
+  .copyright {
+    max-width: 160px;
+    order: 2;
+    padding-bottom: 50px;
+    padding-top: 30px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .copyright {
+    order: 3;
+    padding-top: 31px;
+    text-align: right;
+    width: 40%;
+
+    &__title {
+      padding-right: 39px;
+    }
+
+  }
+
+}

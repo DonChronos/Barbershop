@@ -1,0 +1,28 @@
+.footer {
+  border: 1px solid #3f3f3f;
+  color: #ffffff;
+  margin-top: 35px;
+}
+
+@media (min-width: 768px) {
+
+  .footer {
+    width: auto;
+    margin: 0 auto;
+	max-width: 960px;
+	width: 83.5%;
+    border: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .footer {
+    flex-wrap: nowrap;
+  }
+
+}

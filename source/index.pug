@@ -116,22 +116,18 @@ html
 				+b.BUTTON.button--log-in(type='submit') Войти 
 					+b.SPAN.modal-personal__in-personal  в личный кабинет
 				+b.BUTTON.button--close(type='button') Закрыть
-		+b.FOOTER.page-footer
-			+e.wrapper
-				+b.page-footer__contacts.contacts__
-					+e.B.title Барбершоп «Бородинский»
-					+e.P.text г. Санкт-Петербург, ул. Большая Конюшенная 19/8<br>
-						+b.A.contacts__phone(href="tel:+78125556666") <span class="contacts__phone-mobile">Тел.:</span> +7 (812) 555-66-66
-				+b.page-footer__social.social__
-					+e.B.title Давайте дружить!
-					+e.UL.list
-						+b.LI.social__item
-							+b.A.social__link--vkontakte(href="https://vk.com/htmlacademy") Мы в Вконтакте
-						+b.LI.social__item
-							+b.A.social__link--facebook(href="https://www.facebook.com/htmlacademy") Мы в Фейсбуке
-						+b.LI.social__item
-							+b.A.social__link--instagram(href="https://www.instagram.com/htmlacademy") Мы в Инстаграме
-				+b.page-footer__copyright.copyright__
-					+e.B.text Разработано:
-					+e.A.link.button(href="https://htmlacademy.ru/intensive/adaptive") HTML Academy
+		+b.FOOTER.footer
+			+b.contacts__
+				+e.B.title Барбершоп Бородинский
+				+e.P.text г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+				+b.A.button--contacts(href="tel:+78125556666") <span class="contacts__phone-mobile">Тел.:</span> +7 (812) 555-66-66
+			+b.social
+				+e.B.title Давайте дружить!
+				+e.icons
+					+b.A.social__button--vk(href="#") Мы в Вконтакте
+					+b.A.social__button--fb(href="#") Мы в Фейсбуке
+					+b.A.social__button--ig(href="#") Мы в Инстаграме
+			+b.copyright
+				+e.P.title Разработано:
+				+b.A.button--copyright(href="www.htmlacademy.ru") HTML Academy
 +b.SCRIPT(src='js/script.js')

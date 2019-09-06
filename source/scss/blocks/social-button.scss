@@ -1,0 +1,88 @@
+.social__button {
+  border-right: 1px solid #3f3f3f;
+  display: table-cell;
+  font-size: 0;
+  text-decoration: none;
+  height: 100px;
+  position: relative;
+  width: 33.3333%;
+
+  &:last-child {
+    border: none;
+  }
+
+  &::after {
+    background-repeat: no-repeat;
+    content: "";
+    right: 50%;
+    position: absolute;
+    transform: translate(50%);
+  }
+
+  &--vk::after {
+    background-image: url("../img/vk-big.png");
+    height: 26px;
+    top: 37px;
+    width: 23px;
+  }
+
+  &--fb::after {
+    background-image: url("../img/fb-big.png");
+    height: 39px;
+    top: 30px;
+    width: 18px;
+  }
+
+  &--ig::after {
+    background-image: url("../img/ig-big.png");
+    height: 36px;
+    top: 32px;
+    width: 36px;
+  }
+
+  &--vk:active::after,
+  &--fb:active::after,
+  &--ig:active::after {
+    opacity: 0.3;
+  }
+
+}
+
+@media (min-width: 1200px) {
+
+  .social__button {
+    border: 1px solid #3f3f3f;
+    display: inline-block;
+    margin-right: 3px;
+    height: 48px;
+    vertical-align: top;
+    width: 48px;
+
+    &:last-child {
+      border: 1px solid #3f3f3f;
+    }
+
+    &--vk::after {
+	  background-image: url("../img/vk-small.png");
+      height: 17px;
+      top: 15px;
+      width: 15px;
+    }
+
+    &--fb::after {
+	  background-image: url("../img/fb-small.png");
+      height: 21px;
+      top: 13px;
+      width: 10px;
+    }
+
+    &--ig::after {
+	  background-image: url("../img/ig-small.png");
+      height: 19px;
+      top: 14px;
+      width: 19px;
+    }
+
+  }
+
+}

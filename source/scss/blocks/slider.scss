@@ -20,6 +20,8 @@
 	background-color: transparent;
 	position: relative;
 	text-align: center;
+	box-sizing: content-box;
+	padding: 0;
     &--reviews {
       border-color: #939290;
     }

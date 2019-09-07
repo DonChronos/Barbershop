@@ -7,6 +7,7 @@ let btnClose = document.querySelector('.button--close');
 let btnSuccess = document.querySelector('.button--modal-form-success');
 let btnSendOrder = document.querySelector('.button--submit');
 let btnUser = document.querySelector('.user-list__login');
+if (btnSendOrder) btnSendOrder.addEventListener('click', sendOrder);
 if (btnLogin) btnLogin.addEventListener('click', closeModalForm);
 if (btnClose) btnClose.addEventListener('click', closeModalForm);
 if (btnSuccess) btnSuccess.addEventListener('click', closeModalForm);
@@ -114,4 +115,10 @@ function closeModalForm(event) {
       break;
   }
 
+}
+function sendOrder(event) {
+  event.preventDefault();
+
+  btnSendOrder.classList.toggle('button--in-progress');
+  mfSuccess.classList.toggle('modal-form--show');
 }

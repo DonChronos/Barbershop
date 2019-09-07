@@ -1,0 +1,135 @@
+include bemto/bemto.pug
+mixin button(name, href)
+	+e.LI.item
+		+b.A(href=href)= name
+doctype html
+html
+	head
+		title Записаться
+		meta(charset='utf-8')
+		meta(name='description' content='Barbershop - a cool barbershop')
+		meta(name='viewport' content='width=device-width,initial-scale=1')
+		meta(name='keywords' content='hair, cut, haircut')
+		link(href='css/normalize.css' rel='stylesheet')
+		link(href='css/style.min.css' rel='stylesheet')
+	body
+		+b.HEADER.page-header--inner-page
+			+e.A.logo--inner-page
+				+b.PICTURE
+					+b.SOURCE(media="(min-width: 1200px)" srcset="img/logotype-desktop.svg")
+					+b.SOURCE(media="(min-width: 768px)" srcset="img/logotype-tablet.svg")
+					+b.IMG.img-fix(src="img/logotype-mobile.svg" alt="Барбершоп «Бородинский»" width="226" height="30")
+			+b.NAV.main-nav--closed.--nojs
+				+e.BUTTON.toggle(type="button")
+				+e.wrapper
+					+b.UL.main-nav__list.site-list__
+						+button('Главная', 'index.html')
+						+button('Наши работы', 'photo.html')
+						+e.LI.item--active
+							+b.A Записаться
+						+button('Контакты', '#')
+						+button('HTML Academy', '#')
+					+b.UL.main-nav__list.user-list__
+						+e.LI.item
+							+b.A.user-list__login(href="#") <svg class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"/><polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"/></svg> Вход
+		+b.SECTION.order
+			+e.HEADER.header
+				+b.H1.order__title Запись на стрижку
+				+b.A.button--to-main(href='index.html') На главную
+			+b.FORM.order-form(action='#' method='post')
+				+e.contacts
+					+b.order-form__name
+						+b.INPUT.order-form__field--name(type='text' name='lastname' placeholder='Фамилия' required)
+						+b.INPUT.order-form__field--name(type='text' name='name' placeholder='Имя' required)
+						+b.INPUT.order-form__field--name(type='text' name='patronymic' placeholder='Отчество')
+					+b.order-form__communications
+						+b.INPUT.order-form__field--communications(type='tel' name='phone' placeholder='Контактный телефон' required)
+						+b.INPUT.order-form__field--communications(type='email' name='email' placeholder='Контактный e-mail')
+					+b.TEXTAREA.order-form__for-master(name='for-master' placeholder='Доп. информация для мастера')
+				+e.model
+					+b.B.order-form__title Выберите модель бороды:
+					+b.UL.order-form__list--model
+						+b.LI.order-form__list-item--model
+							+b.INPUT.order-form__field--model(type='radio' name='model' id='admiral' checked)
+							+b.LABEL.order-form__caption--model(for='admiral') адмирал
+							+b.IMG.order-form__icon(width='52' height='49' alt='' src='img/beard-1.svg')
+						+b.LI.order-form__list-item--model
+							+b.INPUT.order-form__field--model(type='radio' name='model' id='woodman')
+							+b.LABEL.order-form__caption--model(for='woodman') лесоруб
+							+b.IMG.order-form__icon(width='58' height='68' alt='' src='img/beard-2.svg')
+						+b.LI.order-form__list-item--model
+							+b.INPUT.order-form__field--model(type='radio' name='model' id='polar')
+							+b.LABEL.order-form__caption--model(for='polar') полярник
+							+b.IMG.order-form__icon(width='63' height='78' alt='' src='img/beard-3.svg')
+						+b.LI.order-form__list-item--model
+							+b.INPUT.order-form__field--model(type='radio' name='model' id='boyar')
+							+b.LABEL.order-form__caption--model(for='boyar') боярин
+							+b.IMG.order-form__icon(width='57' height='97' alt='' src='img/beard-4.svg')
+						+b.LI.order-form__list-item--model
+							+b.INPUT.order-form__field--model(type='radio' name='model' id='sage')
+							+b.LABEL.order-form__caption--model(for='sage') мудрец
+							+b.IMG.order-form__icon(width='45' height='104' alt='' src='img/beard-5.svg')
+				+e.additional
+					+b.B.order-form__title Дополнительные услуги:
+					+b.UL.order-form__list--additional
+						+b.LI.order-form__list-item--additional
+							+b.INPUT.order-form__field--additional(type='checkbox' name='additional' id='paint-beard' checked)
+							+b.LABEL.order-form__caption--additional(for='paint-beard') Подкрасить бороду
+						+b.LI.order-form__list-item--additional
+							+b.INPUT.order-form__field--additional(type='checkbox' name='additional' id='twirl-mustache' checked)
+							+b.LABEL.order-form__caption--additional(for='twirl-mustache') Накрутить усы
+						+b.LI.order-form__list-item--additional
+							+b.INPUT.order-form__field--additional(type='checkbox' name='additional' id='comb-beard')
+							+b.LABEL.order-form__caption--additional(for='comb-beard') Причесать бороду
+						+b.LI.order-form__list-item--additional
+							+b.INPUT.order-form__field--additional(type='checkbox' name='additional' id='align-temple')
+							+b.LABEL.order-form__caption--additional(for='align-temple') Подровнять виски
+						+b.LI.order-form__list-item--additional
+							+b.INPUT.order-form__field--additional(type='checkbox' name='additional' id='remove-grey')
+							+b.LABEL.order-form__caption--additional(for='remove-grey') Убрать седину
+						+b.LI.order-form__list-item--additional
+							+b.INPUT.order-form__field--additional(type='checkbox' name='additional' id='polished-bald')
+							+b.LABEL.order-form__caption--additional(for='polished-bald') Отполировать лысину
+				+b.BUTTON.button--submit(type='submit') Отправить заявку
+		+b.SECTION.modal-personal
+			+e.HEADER.header
+				+b.B.modal-personal__title Личный кабинет
+				+b.P.modal-personal__text Введите свой логин и пароль, чтобы войти
+			+e.FORM.form(action='#' method='post')
+				+b.modal-personal__user
+					+b.INPUT.modal-personal__field(type='text' id='login' placeholder='Логин')
+					+b.modal-personal__caption--login  Логин
+					+b.INPUT.modal-personal__field--password(type='password' id='password' placeholder='Пароль')
+					+b.modal-personal__caption--password Пароль
+				+b.modal-personal__settings
+					+b.INPUT.modal-personal__field--remember(type='checkbox' name='remember' id='remember')
+					+b.LABEL.modal-personal__caption--remember(for='remember') Запомните меня!
+					+b.A.modal-personal__forgot(href='#') Я забыл пароль!
+				+b.BUTTON.button--log-in(type='submit') Войти 
+					+b.SPAN.modal-personal__in-personal  в личный кабинет
+				+b.BUTTON.button--close(type='button') Закрыть
+		+b.SECTION.modal-form--success
+			+b.modal-form__wrapper--success
+				+b.B.modal-form__title Это успех!
+				+b.P.modal-form__text--success Ваша заявка отправлена.<br>Ожидайте, мы свяжемся с вами как только будет минутка.
+				+b.BUTTON.button--modal-form.--modal-form-success(type='button') Закрыть окно
+		+b.SECTION.modal-form--failure
+			+b.modal-form__wrapper
+				+b.B.modal-form__title Неудача
+				+b.P.modal-form__text--failure Что-то пошло не так.<br>Проверьте выделенные красным поля формы.
+				+b.BUTTON.button--modal-form.--modal-form-failure(type='button') ОК
+		+b.FOOTER.footer
+			+b.contacts__
+				+e.B.title Барбершоп Бородинский
+				+e.P.text г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+				+b.A.button--contacts(href="tel:+78125556666") <span class="contacts__phone-mobile">Тел.:</span> +7 (812) 555-66-66
+			+b.social
+				+e.B.title Давайте дружить!
+				+e.icons
+					+b.A.social__button--vk(href="#") Мы в Вконтакте
+					+b.A.social__button--fb(href="#") Мы в Фейсбуке
+					+b.A.social__button--ig(href="#") Мы в Инстаграме
+			+b.copyright
+				+e.P.title Разработано:
+				+b.A.button--copyright(href="www.htmlacademy.ru") HTML Academy
++b.SCRIPT(src='js/script.js')

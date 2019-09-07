@@ -1,0 +1,146 @@
+include bemto/bemto.pug
+mixin button(name, href)
+	+e.LI.item
+		+b.A(href=href)= name
+doctype html
+html
+	head
+		title Наши работы
+		meta(charset='utf-8')
+		meta(name='description' content='Barbershop - a cool barbershop')
+		meta(name='keywords' content='hair, cut, haircut')
+		link(href='css/normalize.css' rel='stylesheet')
+		link(href='css/style.css' rel='stylesheet')
+	body
+		+b.HEADER.page-header--inner-page
+			+e.A.logo--inner-page
+				+b.PICTURE
+					+b.SOURCE(media="(min-width: 1200px)" srcset="img/logotype-desktop.svg")
+					+b.SOURCE(media="(min-width: 768px)" srcset="img/logotype-tablet.svg")
+					+b.IMG(src="img/logotype-mobile.svg" alt="Барбершоп «Бородинский»" width="226" height="30")
+			+b.NAV.main-nav--closed.--nojs
+				+e.BUTTON.toggle(type="button")
+				+e.wrapper
+					+b.UL.main-nav__list.site-list__
+						+button('Главная', 'index.html')
+						+e.LI.item--active
+							+b.A Наши работы
+						+button('Записаться', 'form.html')
+						+button('Контакты', '#')
+						+button('HTML Academy', '#')
+					+b.UL.main-nav__list.user-list__
+						+e.LI.item
+							+b.A.user-list__login(href="#") <svg class="user-list__login-icon" width="16" height="16" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><polygon points="0 7 7.01 7 7.01 4.06 10.96 8.01 7.01 11.91 7.01 9.06 0 9.02 0 7"/><polygon points="7.01 0 7.01 2 14.03 2 14.03 13.99 7.01 13.99 7.01 16 16 16 16 0 7.01 0"/></svg> Вход
+		+b.SECTION.portfolio
+			+e.HEADER.header
+				+b.H1.portfolio__title Наши работы
+				+b.A.button--to-main(href='index.html') На главную
+			+e.items
+				+b.ARTICLE.portfolio__item--month
+					+b.portfolio__item-photo Фото Лжепётра Мчиславского
+					+b.portfolio__item-sub
+						+b.portfolio__item-description
+							+b.B.portfolio__item-name Лжепётр Мчиславский
+							+b.P.portfolio__item-feedback Где я только ни стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
+						+b.UL.portfolio__item-services
+							+b.LI.portfolio__item-title--scissors Стрижка
+							+b.LI.portfolio__item-title--beard Борода
+							+b.LI.portfolio__item-title--mustache Усы
+				+b.ARTICLE.portfolio__item
+					+b.PICTURE
+						+b.SOURCE(media="(min-width: 1200px)" srcset="img/photo-2-desktop.jpg")
+						+b.SOURCE(media="(min-width: 768px)" srcset="img/photo-2-desktop.jpg")
+						+b.IMG(class='portfolio__item-photo' src="img/photo-2-mobile.jpg" alt="Фото Сашы Мальцева" width="280" height="176")
+					+b.portfolio__item-sub
+						+b.portfolio__item-description
+							+b.B.portfolio__item-name Саша Мальцев
+							+b.P.portfolio__item-feedback Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
+						+b.UL.portfolio__item-services
+							+b.LI.portfolio__item-title--scissors Стрижка
+				+b.ARTICLE.portfolio__item
+					+b.PICTURE
+						+b.SOURCE(media="(min-width: 1200px)" srcset="img/photo-3-desktop.jpg")
+						+b.SOURCE(media="(min-width: 768px)" srcset="img/photo-3-desktop.jpg")
+						+b.IMG(class='portfolio__item-photo' src="img/photo-3-mobile.jpg" alt="Фото Владимира Иваныча" width="280" height="176")
+					+b.portfolio__item-sub
+						+b.portfolio__item-description
+							+b.B.portfolio__item-name Владимир Иваныч
+							+b.P.portfolio__item-feedback К зимнему сезону — готов!
+						+b.UL.portfolio__item-services
+							+b.LI.portfolio__item-title--beard Борода
+							+b.LI.portfolio__item-title--mustache Усы
+				+b.ARTICLE.portfolio__item
+					+b.PICTURE
+						+b.SOURCE(media="(min-width: 1200px)" srcset="img/photo-4-desktop.jpg")
+						+b.SOURCE(media="(min-width: 768px)" srcset="img/photo-4-desktop.jpg")
+						+b.IMG(class='portfolio__item-photo' src="img/photo-4-mobile.jpg" alt="Фото Винстона Синего" width="280" height="176")
+					+b.portfolio__item-sub
+						+b.portfolio__item-description
+							+b.B.portfolio__item-name Винстон Синий
+							+b.P.portfolio__item-feedback Как только заростаю и волосы начинают мешать видеть — бегом в&nbsp;Бородинский!
+						+b.UL.portfolio__item-services
+							+b.LI.portfolio__item-title--scissors Стрижка
+		+b.SECTION.price-list
+			+e.H1.title Прейскурант
+			+e.wrapper
+				+b.TABLE.price-list__table
+					+b.TR
+						+b.TD.col-1 1
+						+b.TD.col-2 Классическая стрижка
+						+b.TD.col-3 <span class="price-list__bracket">(</span>с мытьём головы<span class="price-list__bracket">)</span>
+						+b.TD.col-4 1&nbsp;500 руб.
+					+b.TR
+						+b.TD.col-1 2
+						+b.TD.col-2 Современный вариант
+						+b.TD.col-3 <span class="price-list__bracket">(</span>с мытьём головы<span class="price-list__bracket">)</span>
+						+b.TD.col-4 1&nbsp;500 руб.
+					+b.TR
+						+b.TD.col-1 3
+						+b.TD.col-2 Индивидуальный подход
+						+b.TD.col-3 <span class="price-list__bracket">(</span>с мытьём головы<span class="price-list__bracket">)</span>
+						+b.TD.col-4 2&nbsp;000 руб.
+					+b.TR
+						+b.TD.col-1 4
+						+b.TD.col-2 Бритьё бороды
+						+b.TD.col-3 <span class="price-list__bracket">(</span>без мытья<span class="price-list__bracket">)</span>
+						+b.TD.col-4 500 руб.
+					+b.TR
+						+b.TD.col-1 5
+						+b.TD.col-2 Бритьё головы
+						+b.TD.col-3 <span class="price-list__bracket">(</span>с мытьём головы<span class="price-list__bracket">)</span>
+						+b.TD.col-4 1&nbsp;000 руб.
+				+b.price-list__discount
+					+e.IMG.clock(alt='' src='img/clock.svg' width='56' height='56')
+					+e.P.text С 10:00 до 14:00 скидка 20%
+		+b.SECTION.modal-personal
+			+e.HEADER.header
+				+b.B.modal-personal__title Личный кабинет
+				+b.P.modal-personal__text Введите свой логин и пароль, чтобы войти
+			+e.FORM.form(action='#' method='post')
+				+b.modal-personal__user
+					+b.INPUT.modal-personal__field(type='text' id='login' placeholder='Логин')
+					+b.modal-personal__caption--login  Логин
+					+b.INPUT.modal-personal__field--password(type='password' id='password' placeholder='Пароль')
+					+b.modal-personal__caption--password Пароль
+				+b.modal-personal__settings
+					+b.INPUT.modal-personal__field--remember(type='checkbox' name='remember' id='remember')
+					+b.LABEL.modal-personal__caption--remember(for='remember') Запомните меня!
+					+b.A.modal-personal__forgot(href='#') Я забыл пароль!
+				+b.BUTTON.button--log-in(type='submit') Войти 
+					+b.SPAN.modal-personal__in-personal  в личный кабинет
+				+b.BUTTON.button--close(type='button') Закрыть
+		+b.FOOTER.footer
+			+b.contacts__
+				+e.B.title Барбершоп Бородинский
+				+e.P.text г. Санкт-Петербург, ул. Большая Конюшенная 19/8
+				+b.A.button--contacts(href="tel:+78125556666") <span class="contacts__phone-mobile">Тел.:</span> +7 (812) 555-66-66
+			+b.social
+				+e.B.title Давайте дружить!
+				+e.icons
+					+b.A.social__button--vk(href="#") Мы в Вконтакте
+					+b.A.social__button--fb(href="#") Мы в Фейсбуке
+					+b.A.social__button--ig(href="#") Мы в Инстаграме
+			+b.copyright
+				+e.P.title Разработано:
+				+b.A.button--copyright(href="www.htmlacademy.ru") HTML Academy
++b.SCRIPT(src='js/script.js')

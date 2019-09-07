@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-weight: normal;
   font-family: "PT Sans Narrow";
@@ -814,9 +815,250 @@ label {
   .copyright__title {
     font-size: 18px;
     margin-bottom: 12px; }
+
+.portfolio {
+  background-color: #f8f5f2; }
+  .portfolio__title {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0;
+    padding-bottom: 30px;
+    padding-top: 29px;
+    text-align: center; }
+  .portfolio__items {
+    padding-bottom: 14px;
+    position: relative; }
+    .portfolio__items::after {
+      content: "";
+      background-image: -webkit-gradient(linear, left bottom, right top, color-stop(50%, transparent), color-stop(50%, #f8f5f2)), -webkit-gradient(linear, right bottom, left top, color-stop(50%, transparent), color-stop(50%, #f8f5f2));
+      background-image: linear-gradient(to top right, transparent 50%, #f8f5f2 50%), linear-gradient(to top left, transparent 50%, #f8f5f2 50%);
+      background-position: 0 0, 100% 0;
+      background-repeat: no-repeat;
+      background-size: 50.1% 100%;
+      height: 35px;
+      left: 0;
+      position: absolute;
+      bottom: -35px;
+      width: 100%;
+      z-index: 10; }
+  .portfolio__item {
+    margin: 0 auto;
+    width: 280px;
+    margin-bottom: 20px; }
+    .portfolio__item--month {
+      position: relative; }
+      .portfolio__item--month::before {
+        background-color: #826550;
+        color: #ffffff;
+        content: "Работа месяца";
+        font-size: 20px;
+        font-weight: bold;
+        left: 0;
+        line-height: 27px;
+        padding-bottom: 11px;
+        padding-left: 27px;
+        padding-right: 17px;
+        padding-top: 12px;
+        position: absolute;
+        text-align: center;
+        text-transform: uppercase;
+        top: 401px; }
+      .portfolio__item--month::after {
+        content: "";
+        background-image: -webkit-gradient(linear, left top, right bottom, color-stop(50%, #826550), color-stop(50%, transparent)), -webkit-gradient(linear, left bottom, right top, color-stop(50%, #826550), color-stop(50%, transparent));
+        background-image: linear-gradient(to bottom right, #826550 50%, transparent 50%), linear-gradient(to top right, #826550 50%, transparent 50%);
+        background-position: 0 100%, 0 0;
+        background-repeat: no-repeat;
+        background-size: 80.1% 100%;
+        height: 50px;
+        left: 157px;
+        position: absolute;
+        top: 401px;
+        width: 25px;
+        z-index: 9; }
+  .portfolio picture {
+    min-width: 280px; }
+  .portfolio__item-photo {
+    height: 176px; }
+  .portfolio__item--month .portfolio__item-photo {
+    background-image: url("../img/photo-1-desktop.jpg");
+    background-position: 100% 0;
+    background-repeat: no-repeat;
+    font-size: 0;
+    height: 480px;
+    width: 100%; }
+  .portfolio__item-sub {
+    border: 1px solid #e5ddd5;
+    border-top: none; }
+  .portfolio__item-description {
+    padding-bottom: 20px;
+    padding-left: 23px;
+    padding-right: 20px;
+    padding-top: 23px; }
+  .portfolio__item--month .portfolio__item-description {
+    padding-top: 19px;
+    padding-bottom: 17px; }
+  .portfolio__item-name {
+    display: block;
+    font-size: 24px;
+    line-height: 27px;
+    margin-bottom: 14px; }
+  .portfolio__item-feedback {
+    font-size: 18px;
+    margin: 0; }
+  .portfolio__item--month .portfolio__item-services {
+    padding-bottom: 0; }
+  .portfolio__item-services {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 9px; }
+  .portfolio__item--month .portfolio__item-title--beard::before {
+    left: 14px; }
+  .portfolio__item-title {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    padding-bottom: 18px;
+    padding-right: 20px;
+    position: relative;
+    text-transform: uppercase;
+    vertical-align: top; }
+    .portfolio__item-title::before {
+      background-repeat: no-repeat;
+      content: "";
+      position: absolute; }
+    .portfolio__item-title--scissors {
+      padding-left: 58px; }
+      .portfolio__item-title--scissors::before {
+        background-image: url("../img/scissors.svg");
+        height: 20px;
+        left: 22px;
+        top: 3px;
+        width: 21px; }
+    .portfolio__item-title--beard {
+      padding-left: 57px; }
+      .portfolio__item-title--beard::before {
+        background-image: url("../img/beard.svg");
+        height: 21px;
+        left: 18px;
+        top: 1px;
+        width: 23px; }
+    .portfolio__item-title--mustache {
+      padding-left: 68px; }
+      .portfolio__item-title--mustache::before {
+        background-image: url("../img/mustache.svg");
+        height: 12px;
+        left: 12px;
+        top: 6px;
+        width: 45px; }
+
+b {
+  font-weight: 700; }
+
+article, aside, details, figcaption, figure, footer, header, img, main, menu, nav, section, summary {
+  display: block; }
+
+.price-list {
+  color: #ffffff;
+  background-color: #353535;
+  padding: 0 20px;
+  padding-bottom: 19px;
+  padding-top: 50px;
+  position: relative; }
+  .price-list::after {
+    content: "";
+    background-image: -webkit-gradient(linear, left bottom, right top, color-stop(50%, transparent), color-stop(50%, #353535)), -webkit-gradient(linear, right bottom, left top, color-stop(50%, transparent), color-stop(50%, #353535));
+    background-image: linear-gradient(to top right, transparent 50%, #353535 50%), linear-gradient(to top left, transparent 50%, #353535 50%);
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
+    background-size: 50.1% 100%;
+    height: 35px;
+    left: 0;
+    position: absolute;
+    bottom: -35px;
+    width: 100%;
+    z-index: 10; }
+  .price-list__title {
+    font-size: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 23px; }
+  .price-list__table {
+    display: block;
+    margin-bottom: 30px;
+    width: 100%; }
+    .price-list__table tbody {
+      display: block; }
+    .price-list__table tr {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      font-size: 20px;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      margin-bottom: 15px;
+      padding: 0; }
+    .price-list__table td {
+      display: block;
+      padding: 0; }
+    .price-list__table .col-1 {
+      display: none; }
+    .price-list__table .col-2 {
+      font-weight: bold;
+      padding-left: 0; }
+    .price-list__table .col-3 {
+      -webkit-box-ordinal-group: 4;
+          -ms-flex-order: 3;
+              order: 3;
+      padding-left: 0;
+      width: 100%; }
+    .price-list__table .col-4 {
+      -webkit-box-ordinal-group: 3;
+          -ms-flex-order: 2;
+              order: 2;
+      padding-right: 0; }
+  .price-list__discount {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    outline: 1px solid #484848;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 16px 0; }
+  .price-list__clock {
+    width: 35%;
+    height: 56px; }
+  .price-list__text {
+    margin: 0;
+    width: 59%; }
   @media (min-width: 768px) {
   .page-header {
     background-color: #000000; }
+    .page-header--inner-page::after {
+      content: "";
+      background-image: -webkit-gradient(linear, right top, left bottom, color-stop(50%, transparent), color-stop(50%, #f8f5f2)), -webkit-gradient(linear, left top, right bottom, color-stop(50%, transparent), color-stop(50%, #f8f5f2));
+      background-image: linear-gradient(to bottom left, transparent 50%, #f8f5f2 50%), linear-gradient(to bottom right, transparent 50%, #f8f5f2 50%);
+      background-position: 0 0, 100% 0;
+      background-repeat: no-repeat;
+      background-size: 60.1% 100%;
+      height: 50px;
+      left: 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      z-index: 10;
+      top: 244px; }
   .page-header__logo {
     -webkit-box-ordinal-group: 3;
         -ms-flex-order: 2;
@@ -827,6 +1069,11 @@ label {
     background-image: url("../img/bg-header.jpg");
     background-repeat: no-repeat;
     background-position: center -9px; }
+    .page-header__logo--inner-page {
+      background-image: url("../img/bg-header-inner.jpg");
+      background-position: center -72px;
+      background-size: cover;
+      height: 222px; }
   .page-header__logo img {
     display: block;
     width: 370px;
@@ -1253,21 +1500,213 @@ label {
         -ms-flex-order: 2;
             order: 2;
     padding-bottom: 50px;
-    padding-top: 30px; } }
+    padding-top: 30px; }
+  .portfolio {
+    position: relative; }
+    .portfolio::after {
+      content: "";
+      background-image: -webkit-gradient(linear, left bottom, right top, color-stop(50%, transparent), color-stop(50%, #f8f5f2)), -webkit-gradient(linear, right bottom, left top, color-stop(50%, transparent), color-stop(50%, #f8f5f2));
+      background-image: linear-gradient(to top right, transparent 50%, #f8f5f2 50%), linear-gradient(to top left, transparent 50%, #f8f5f2 50%);
+      background-position: 0 0, 100% 0;
+      background-repeat: no-repeat;
+      background-size: 50.1% 100%;
+      height: 35px;
+      left: 0;
+      position: absolute;
+      bottom: -35px;
+      width: 100%;
+      z-index: 10; }
+    .portfolio::after {
+      height: 42px;
+      bottom: -42px; }
+    .portfolio__header {
+      margin: 0 auto;
+      max-width: 960px;
+      width: 83.5%;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding-bottom: 20px;
+      padding-top: 24px; }
+    .portfolio__title {
+      font-size: 40px; }
+    .portfolio__items {
+      margin: 0 auto;
+      max-width: 960px;
+      width: 83.5%;
+      padding-bottom: 20px; }
+      .portfolio__items::after {
+        content: none; }
+    .portfolio__item {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      margin-bottom: 41px;
+      width: auto; }
+      .portfolio__item--month::before, .portfolio__item--month::after {
+        content: none; }
+    .portfolio picture {
+      min-width: 270px; }
+    .portfolio__item-photo {
+      height: 294px;
+      width: 270px; }
+    .portfolio__item--month .portfolio__item-photo {
+      height: 480px;
+      width: 46%; }
+    .portfolio__item-sub {
+      border-left: none;
+      border-top: 1px solid #e5ddd5;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
+      padding-left: 51px;
+      padding-top: 39px;
+      width: 100%; }
+    .portfolio__item--month .portfolio__item-sub {
+      padding-top: 24px;
+      width: 54%; }
+    .portfolio__item-description {
+      display: block;
+      padding: 0; }
+    .portfolio__item-name {
+      padding-bottom: 12px; }
+    .portfolio__item-feedback {
+      padding-right: 80px; }
+    .portfolio__item--month .portfolio__item-feedback {
+      padding-right: 18%;
+      max-width: 300px; }
+    .portfolio__item-services {
+      padding: 0;
+      padding-bottom: 23px; }
+    .portfolio__item--month .portfolio__item-services {
+      padding-bottom: 16px; }
+    .portfolio__item-title {
+      padding-right: 17px; }
+      .portfolio__item-title--scissors {
+        padding-left: 39px; }
+        .portfolio__item-title--scissors::before {
+          left: 0px;
+          top: 3px; }
+      .portfolio__item-title--beard {
+        padding-left: 39px;
+        padding-right: 40px; }
+        .portfolio__item-title--beard::before {
+          left: 0px;
+          top: 1px; }
+      .portfolio__item-title--mustache {
+        padding-left: 46px; }
+        .portfolio__item-title--mustache::before {
+          left: -11px;
+          top: 6px; }
+    .portfolio__item--month .portfolio__item-title--beard {
+      padding-left: 57px; }
+  .price-list {
+    padding: 0;
+    padding-top: 90px;
+    padding-bottom: 59px; }
+    .price-list::after {
+      content: none; }
+    .price-list__wrapper {
+      margin: 0 auto;
+      max-width: 960px;
+      width: 83.5%; }
+    .price-list__title {
+      margin: 0 auto;
+      max-width: 960px;
+      width: 640px;
+      width: 83.5%;
+      font-size: 40px;
+      text-align: left;
+      padding-bottom: 53px; }
+    .price-list__bracket {
+      display: none; }
+    .price-list__table {
+      border-spacing: 0;
+      display: table;
+      margin-bottom: 11px; }
+      .price-list__table tbody {
+        display: table-row-group; }
+      .price-list__table tr {
+        display: table-row;
+        font-size: 20px; }
+      .price-list__table td {
+        border: 1px solid #484848;
+        display: table-cell;
+        padding: 13px 19px;
+        vertical-align: top; }
+      .price-list__table .col-1 {
+        color: #868686;
+        display: table-cell;
+        padding-left: 0;
+        padding-right: 0;
+        text-align: center;
+        width: 70px; }
+      .price-list__table .col-2 {
+        padding: 13px 19px; }
+      .price-list__table .col-3 {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        padding: 13px 19px;
+        padding-left: 18px;
+        padding-right: 5px;
+        width: auto; }
+      .price-list__table .col-4 {
+        -webkit-box-ordinal-group: 4;
+            -ms-flex-order: 3;
+                order: 3;
+        padding: 13px 19px;
+        min-width: 105px; }
+    .price-list__discount {
+      padding: 20px 0;
+      width: 100%; }
+    .price-list__clock {
+      height: 70px;
+      width: 20%; }
+    .price-list__text {
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      width: 71%; } }
   @media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 768px) and (min-resolution: 144dpi), (min-width: 768px) and (min-resolution: 1.5dppx) {
+      .page-header__logo--inner-page {
+        background-image: url("../img/bg-header-inner@2x.jpg");
+        background-size: 1338px auto; }
     .page-header__logo {
       background-image: url("../img/bg-header@2x.jpg");
       background-size: 1338px auto; }
   .page-header__logo {
     background-image: url("../img/bg-header@2x.jpg");
+    background-size: 1338px auto; }
+  .page-header__logo--inner-page {
+    background-image: url("../img/bg-header@2x.jpg");
     background-size: 1338px auto; } }
   @media (min-width: 1200px) {
+  .page-header--inner-page::after {
+    height: 75px;
+    top: 317px; }
   .page-header__logo {
     height: 648px;
     background-position: center 0;
     background-size: cover; }
-  .page-header__logo img {
-    margin-top: 57px; }
+    .page-header__logo--inner-page {
+      background-size: auto;
+      height: 320px; }
+    .page-header__logo .page-header__logo img {
+      margin-top: 57px; }
   .main-nav__wrapper {
     width: 960px; }
   .site-list {
@@ -1501,7 +1940,137 @@ label {
     text-align: right;
     width: 40%; }
     .copyright__title {
-      padding-right: 39px; } }
+      padding-right: 39px; }
+  .portfolio::after {
+    content: none; }
+  .portfolio__header {
+    padding-bottom: 61px;
+    padding-top: 20px; }
+  .portfolio__items {
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-bottom: 48px; }
+  .portfolio__item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 0;
+    margin-bottom: 41px;
+    padding: 0;
+    width: 292px; }
+    .portfolio__item--month {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row;
+      width: 100%; }
+      .portfolio__item--month::before {
+        content: "Работа месяца";
+        left: auto;
+        padding-left: 23px;
+        padding-right: 21px;
+        right: 0;
+        text-align: left;
+        top: 26px; }
+      .portfolio__item--month::after {
+        content: "";
+        background-image: -webkit-gradient(linear, right top, left bottom, color-stop(50%, #826550), color-stop(50%, transparent)), -webkit-gradient(linear, right bottom, left top, color-stop(50%, #826550), color-stop(50%, transparent));
+        background-image: linear-gradient(to bottom left, #826550 50%, transparent 50%), linear-gradient(to top left, #826550 50%, transparent 50%);
+        left: auto;
+        right: 152px;
+        top: 26px; }
+  .portfolio__item-photo {
+    width: 294px; }
+  .portfolio__item--month .portfolio__item-photo {
+    width: 52.1%; }
+  .portfolio__item-sub {
+    border: 1px solid #e5ddd5;
+    border-top: none;
+    min-height: 216px;
+    padding: 0;
+    padding-top: 29px;
+    width: 292px; }
+  .portfolio__item--month .portfolio__item-sub {
+    border: 1px solid #e5ddd5;
+    border-left: none;
+    padding-left: 40px;
+    padding-top: 128px;
+    width: 47.9%; }
+  .portfolio__item-description {
+    padding-left: 33px;
+    padding-right: 15px; }
+  .portfolio__item--month .portfolio__item-description {
+    padding: 0; }
+  .portfolio__item-feedback {
+    padding: 0; }
+  .portfolio__item--month .portfolio__item-feedback {
+    padding-right: 140px; }
+  .portfolio__item-services {
+    padding-bottom: 14px;
+    padding-left: 32px; }
+  .portfolio__item--month .portfolio__item-services {
+    padding: 0;
+    padding-bottom: 11px; }
+  .price-list {
+    padding-top: 82px;
+    padding-bottom: 84px; }
+    .price-list__wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+    .price-list__title {
+      width: 960px;
+      width: 100%; }
+    .price-list__table {
+      margin: 0;
+      margin-bottom: 0;
+      width: 65.6%; }
+      .price-list__table .col-4 {
+        min-width: 95px; }
+    .price-list__discount {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      width: 28%; }
+    .price-list__clock {
+      height: 139px;
+      padding: 0;
+      padding-bottom: 26px;
+      padding-top: 14px;
+      width: 142px; }
+    .price-list__text {
+      font-size: 20px;
+      font-weight: normal;
+      padding: 0 50px;
+      text-transform: none;
+      width: auto; } }
   @media (max-width: 767px) {
   .main-nav--closed .site-list__item {
     display: none; }

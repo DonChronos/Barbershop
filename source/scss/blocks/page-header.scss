@@ -18,6 +18,30 @@
 @media (min-width: $tablet-width) {
   .page-header {
     background-color: #000000;
+	&--inner-page::after {
+      content: "";
+      background-image:
+        linear-gradient(
+          to bottom left,
+          transparent 50%,
+          #f8f5f2 50%
+        ),
+        linear-gradient(
+          to bottom right,
+          transparent 50%,
+          #f8f5f2 50%
+        );
+      background-position: 0 0, 100% 0;
+      background-repeat: no-repeat;
+      background-size: 60.1% 100%;
+      height: 50px;
+      left: 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      z-index: 10;
+	  top: 244px
+    }
   }
 
   .page-header__logo {
@@ -30,7 +54,16 @@
     background-image: url("../img/bg-header.jpg");
     background-repeat: no-repeat;
     background-position: center -9px;
-    
+	&--inner-page {
+	background-image: url('../img/bg-header-inner.jpg');
+	background-position: center -72px;
+	background-size: cover;
+	height: 222px;
+	@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-header-inner@2x.jpg");
+      background-size: 1338px auto;
+    }
+	}
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("../img/bg-header@2x.jpg");
       background-size: 1338px auto;
@@ -54,17 +87,32 @@
     background-size: 1338px auto;
   }
 }
+@media (min-width: 768px) and (min-resolution: 144dpi),
+       (min-width: 768px) and (min-resolution: 1.5dppx) {
+  .page-header__logo--inner-page {
+    background-image: url("../img/bg-header@2x.jpg");
+    background-size: 1338px auto;
+  }
+}
 
 
 @media (min-width: $desktop-width) {
+  .page-header--inner-page::after {
+  height: 75px;
+  top: 317px;
+  }
   .page-header__logo {
     height: 648px;
 
     background-position: center 0;
     background-size: cover;
+	&--inner-page {
+	background-size: auto;
+	height: 320px;
   }
 
   .page-header__logo img {
     margin-top: 57px;
   }
+}
 }
